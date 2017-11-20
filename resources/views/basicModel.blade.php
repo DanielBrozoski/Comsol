@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
-
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap -->
-    <link href="css/app.css" rel="stylesheet">
+
 
 
     <!-- Última versão CSS compilada e minificada -->
@@ -31,8 +31,8 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <link href="css/main.css" rel="stylesheet">
+    <link href="{{asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body>
     @section('topbar')
@@ -41,22 +41,30 @@
 
 
         <div class="row">
-            <div class="col-lg-4">
-                @section('sideMenu')
-                    @include('sideMenu')
+            <div class="col-lg-2">
+                @section('sideMenuLeft')
+                    @include('sideMenuLeft')
                 @show
 
             <div class="container">
                 <div class="col-lg-8">
                     @yield('content')
                 </div>
+
+
+                <div class="col-lg-2">
+                    @section('sideMenuRight ')
+                        @yield('sideMenuRight')
+                    @show
+                </div>
             </div>
-        </div>
-        </div>
 
-    @section('footerBar')
-        @include('footerBar')
-    @show
+            </div>
+        </div> <!-- fim da row  -->
 
+
+    {{-- @section('footerBar') -->
+       @include('footerBar') -->
+    @show --}}
 </body>
 </html>

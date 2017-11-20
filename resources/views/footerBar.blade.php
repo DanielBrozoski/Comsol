@@ -31,19 +31,24 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <link href="css/main.css" rel="stylesheet">
+        <style>
+
+
+            .container #footer-body ul {display: flex; width: 100%}
+            .container #footer-body ul li { flex-grow: 1;}
+            .container #footer-body ul li a{ color: white;}
+            .container #footer-body ul li a:hover{ text-decoration: underline;}
+        </style>
     </head>
     <body>
     <div class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container">
             <div class="navbar-collapse collapse" id="footer-body">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Browse Our Library</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Our Partners</a></li>
-                    <li><a href="#">User Review</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Nossos parceiros</a></li>
+                    <li><a href="#">Políticas de privacidade</a></li>
                 </ul>
             </div>
             <div class="navbar-header">

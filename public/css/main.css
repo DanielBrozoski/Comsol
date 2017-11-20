@@ -1,7 +1,13 @@
+/* Globais */
 body,html{
     height: 100%;
 }
 
+.bg-primary{background-color: #32a041 !important;}
+.bg-secundary{background-color: #67b168 !important;}
+/* ----------------- */
+
+/* Side Menu */
 nav.sidebar, .main{
     -webkit-transition: margin 200ms ease-out;
     -moz-transition: margin 200ms ease-out;
@@ -79,7 +85,7 @@ nav.sidebar, .main{
         width: 100%;
     }
 
-    nav.sidebar:hover{
+    nav.sidebar :hover{
         margin-left: 0px;
     }
 
@@ -116,6 +122,18 @@ section{
     padding-left: 15px;
 }
 
+.colapse .nav {  position: relative;}
+.collapse .nav li.dropdown  a{color:white}
+.collapse .nav li.dropdown  a:hover{color:white; background-color: lightgreen }
+/* ----------------- */
+/* Options menu */
+.container ul li .form-inline {margin-top:10px; }
 .navbar{background:#32a041}
 .navbar-default{border-color:#000;}
 .navbar .container .nav .nav-item a {color:white; font-size: 22px;margin-top: 5px}
+
+/* ----------------- */
+.navbar{background:#32a041}
+.navbar-default{border-color:#000;}
+.navbar .container .nav .nav-item a {color:white; font-size: 22px;margin-top: 5px}
+/* ----------------- */

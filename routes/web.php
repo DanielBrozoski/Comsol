@@ -15,14 +15,30 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/66', function (){
-   return view("indexEmployee");
+Route::get('/index/funcionario', 'HomeController@funcionario')->name('home');
 
-});
+
 Route::get('/tp', function (){
-   return view("basicModel");
-
+   return view("indexEmployee");
 });
+Route::get('/t', function (){
+   return view("pagination");
+});
+Route::get('/produtos', function (){
+   return view("product/listProducts");
+});
+
+Route::get('/grupoProdutos', function (){
+   return view("product/groupProducts");
+});
+Route::get('/culturaProdutos', function (){
+   return view("product/cultureProducts");
+});
+Route::get('/novoProduto', function (){
+   return view("product/newProducts");
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
